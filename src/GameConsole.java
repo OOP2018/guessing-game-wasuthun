@@ -2,22 +2,35 @@ import java.util.Scanner;
 
 /** 
  *  Play guessing game on the console.
+ *  @author wasuthun wanaphongthipakorn
  */
 public class GameConsole {
 
+	/**
+	 * play method is used to run a game that is parameter of this method
+	 * @param game
+	 * @return solution
+	 */
 	/** play the game. */
+	/*
+	 * play method is used to run and play a game class
+	 * @param game
+	 * @return secret number
+	 * */
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
 		
 		// describe the game
-		System.out.println( game.toString() );
-		
+		boolean correct=false;
+		int guess=0;
+		while(!correct) {
 		// This is just an example.
-		System.out.println( game.getMessage() );
+		System.out.println( game.toString() );
 		System.out.print("Your answer? ");
-		int guess = console.nextInt();
-		boolean correct = game.guess(guess);
+		guess = console.nextInt();
+		correct = game.guess(guess);
 		System.out.println( game.getMessage() );
+		}
 		return guess;
 	}
 	

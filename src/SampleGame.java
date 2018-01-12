@@ -2,7 +2,7 @@ import java.util.Random;
 /**
  * Example guessing game.
  * 
- * @author Your Name
+ * @author wasuthun wanaphongthipakorn
  * @version 2018.01.11
  */
 public class SampleGame extends NumberGame {
@@ -13,6 +13,7 @@ public class SampleGame extends NumberGame {
     
 	/** count guesses */
 //TODO add an attribute to count guesses
+    private int count=0;
 
     /** Initialize a new default game. */
     public SampleGame()
@@ -38,21 +39,22 @@ public class SampleGame extends NumberGame {
      * @return true if guess is correct, false otherwise
      */
     public boolean guess(int number) {
+    	count++;
     	if (number == secret) {
-    		setMessage("Correct! The decimal value is "+secret);
+    		setMessage("Correct! The decimal value is "+secret+" count guess"+count);
     		return true;
     	}
     	if (number < 3*secret/4) {
-    		setMessage("Woah! Your answer is WAY too small.");
+    		setMessage("Woah! Your answer is WAY too small."+" count guess"+count);
     	}
     	else if (number < secret) {
-    		setMessage("Your answer is too small.");
+    		setMessage("Your answer is too small."+" count guess"+count);
     	}
     	else if (number > secret*4/3) {
-    		setMessage("No way! Your answer is WAY too large.");
+    		setMessage("No way! Your answer is WAY too large."+" count guess"+count);
     	}
     	else /* if (number > secret) */ {
-    		setMessage("Your answer is too large.");
+    		setMessage("Your answer is too large."+" count guess"+count);
     	}
     	return false;
     }
