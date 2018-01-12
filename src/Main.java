@@ -15,5 +15,7 @@ public class Main {
 		//TODO display how many guesses the user made
 		GameSolver g=new GameSolver();
 		System.out.println("GameSolver answer "+g.play(game));
+		GameSolver2 gg=new GameSolver2();
+		System.out.println(gg.play(game));
 	}
 }
