@@ -6,7 +6,11 @@
 public class GameSolver2 {
 	/**
 	 * this attribute is use for recursive and initial
+<<<<<<< HEAD
 	 * numGuess and num is upperbound/2
+=======
+	 * numGuess and num is upperBound in main class divided by two
+>>>>>>> da995857ca9083954de450ae717bb09e50c3da9c
 	 */
 	private int numGuess = 50;
 	private int num = 50;
