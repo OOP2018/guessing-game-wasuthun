@@ -54,9 +54,16 @@ public class NumberGame {
 	public int getUpperBound() {
 		return Integer.MAX_VALUE;  // not very helpful :-)
 	}
+	/*
+	 * this method is use to access a count
+	 * @return count of guess; 
+	 */
 	public int getCount() {
 		return counter;
-	}
+	}	
+	/*
+	 * this method is use to setting value of count
+	 */
 	public void setCount(int count) {
 		this.counter=count;
 	}
