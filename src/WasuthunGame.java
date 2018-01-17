@@ -37,7 +37,7 @@ public class WasuthunGame extends NumberGame{
 	public boolean guess(int number) {
 		super.setCount(getCount()+1);
 		if(number==this.secret) {
-			super.setMessage("Correct Count"+super.getCount());
+			super.setMessage("Correct Count "+getCountWasuthun());
 			return true;
 			}
 		else if(number<this.secret) { 
@@ -49,6 +49,13 @@ public class WasuthunGame extends NumberGame{
 			return false;
 		}
 		
+	}
+	/*
+	 * this method is use to access a count
+	 * @return count of guess; 
+	 */
+	public int getCountWasuthun() {
+		return super.getCount();
 	}
 	/**
 	 * this method is use to access a upperBound
@@ -62,7 +69,7 @@ public class WasuthunGame extends NumberGame{
 	 * @return general description
 	 */
 	public String toString() {
-		return "Guess a secret number between 1 and 100";
+		return "Guess a secret number between 1 and "+this.upperBound;
 	}
 	
 }

@@ -23,9 +23,9 @@ public class GameConsole {
 		// describe the game
 		boolean correct=false;
 		int guess=0;
+		System.out.println( game.toString() );
 		while(!correct) {
 		// This is just an example.
-		System.out.println( game.toString() );
 		System.out.print("Your answer? ");
 		guess = console.nextInt();
 		correct = game.guess(guess);

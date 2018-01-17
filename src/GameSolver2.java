@@ -6,6 +6,7 @@
 public class GameSolver2 {
 	/**
 	 * this attribute is use for recursive and initial
+	 * numGuess and num is upperbound/2
 	 */
 	private int numGuess = 50;
 	private int num = 50;
@@ -19,14 +20,24 @@ public class GameSolver2 {
 		if (game.guess(numGuess)) {
 			return numGuess;
 		} else if (game.getMessage().contains("small")) {
+			if(numGuess==1&&num==1)
+				numGuess=2;
+			else if(numGuess==0&&num==0) 
+				numGuess=1;
+			else {
 			numGuess += num / 2;
 			num = num / 2;
-
+			}
 			return play(game);
 		} else if (game.getMessage().contains("large")) {
+			if(numGuess==1&&num==1)
+				numGuess=2;
+			else if(numGuess==0&&num==0) 
+				numGuess=1;
+			else {
 			numGuess -= num / 2;
 			num = num / 2;
-
+			}
 			return play(game);
 		}
 		return 0;
