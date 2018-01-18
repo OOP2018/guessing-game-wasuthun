@@ -10,7 +10,6 @@ public class NumberGame {
 	/** A helpful message for user. */
 	private String message;
 	private int counter=0;
-
     /** Initialize a new default game. */
     public NumberGame() {
 		// initialize your game.
@@ -27,7 +26,7 @@ public class NumberGame {
 		message = "Sorry, that's not correct";
 		return false;
     }
-    
+ 
     /**
      * Return a message about the most recent call to guess().
      * Initially the message should tell the user something so

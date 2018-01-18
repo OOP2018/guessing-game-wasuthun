@@ -57,6 +57,12 @@ public class WasuthunGame extends NumberGame{
 	public int getCountWasuthun() {
 		return super.getCount();
 	}
+	/*
+	 * this method use to change a upperBound
+	 */
+	public void setUpperBound(int upperBound) {
+		this.upperBound=upperBound;
+	}
 	/**
 	 * this method is use to access a upperBound
 	 * @return upperBound

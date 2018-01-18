@@ -24,6 +24,7 @@ public class GameSolver {
 			if (game.guess(value)) {
 				correct = true;
 			} else if (!game.guess(value) && game.getMessage().contains("small")) {
+				
 				num = value;
 			} else if (!game.guess(value) && game.getMessage().contains("large")) {
 
