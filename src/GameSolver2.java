@@ -16,6 +16,7 @@ public class GameSolver2 {
 		int min=1;
 		int max=game.getUpperBound();
 		int guess=min+(max-min)/2;
+		System.out.println("guess "+ guess);
 		while(!game.guess(guess)) {
 			if(game.getMessage().contains("large")) {
 				max=guess-1;
@@ -25,7 +26,7 @@ public class GameSolver2 {
 				min=guess+1;
 				guess=min+(max-min)/2;
 			}
-		
+		System.out.println("guess "+guess);
 		}
 		
 		return guess;

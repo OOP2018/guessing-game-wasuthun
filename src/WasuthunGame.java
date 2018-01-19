@@ -44,7 +44,6 @@ public class WasuthunGame extends NumberGame{
 	 */
 	public boolean guess(int number) {
 		count++;
-		System.out.println("plus");
 		if(number==this.secret) {
 			super.setMessage("Correct Count "+getCount());
 			return true;
