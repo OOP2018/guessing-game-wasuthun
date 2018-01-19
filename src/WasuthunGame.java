@@ -34,7 +34,6 @@ public class WasuthunGame extends NumberGame{
 		long seed=System.nanoTime();
 		Random rand=new Random(seed);
 		this.secret=rand.nextInt(upperBound)+1;
-		System.out.println(this.secret);
 		super.setMessage("I'm thinking of a number between 1 and "+this.upperBound);
 	}
 	/*

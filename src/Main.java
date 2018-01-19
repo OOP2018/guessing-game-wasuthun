@@ -8,12 +8,11 @@ public class Main {
 		// upper limit for secret number in guessing game
 		int upperBound = 10;
 		WasuthunGame game = new WasuthunGame(upperBound);
-//		GameConsole ui = new GameConsole( );
-//		int solution = ui.play( game );
-//		System.out.println("play() returned "+solution);
-//		GameSolver g=new GameSolver();
-//		System.out.println("GameSolver answer "+g.play(game));
+		GameConsole ui = new GameConsole( );
+		int solution = ui.play( game );
+		System.out.println("play() returned "+solution);
 		GameSolver2 gg=new GameSolver2();
+		game.setCount(0);
 		System.out.println("GameSolver answer "+gg.play(game) + " Count "+ game.getCount());
 	}
 }
