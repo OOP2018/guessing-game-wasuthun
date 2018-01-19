@@ -18,13 +18,16 @@ public class GameSolver2 {
 		int guess=min+(max-min)/2;
 		while(!game.guess(guess)) {
 			if(game.getMessage().contains("large")) {
-				max=game.getUpperBound()-1;
+				max=guess-1;
 				guess=min+(max-min)/2;
+				
 			}else if(game.getMessage().contains("small")){
-				min=min+1;
+				min=guess+1;
 				guess=min+(max-min)/2;
 			}
+		
 		}
+		
 		return guess;
 
 	}

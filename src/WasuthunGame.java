@@ -6,6 +6,8 @@ import java.util.Random;
  *
  */
 public class WasuthunGame extends NumberGame{
+
+	 
 	/**
 	* Game of guessing a secret number.
 	* @author Wasuthun Wanaphongthiakorn
@@ -15,6 +17,10 @@ public class WasuthunGame extends NumberGame{
 	 */
 	private int upperBound;
 	/*
+	 * count guess
+	 */
+	private int count;
+	/*
 	 * solution of this game
 	 * */
 	private int secret;
@@ -22,11 +28,13 @@ public class WasuthunGame extends NumberGame{
 	 * constructor of this class
 	 * @param upperBound
 	 */
+	
 	public WasuthunGame(int upperBound) {
 		this.upperBound=upperBound;
 		long seed=System.nanoTime();
 		Random rand=new Random(seed);
 		this.secret=rand.nextInt(upperBound)+1;
+		System.out.println(this.secret);
 		super.setMessage("I'm thinking of a number between 1 and "+this.upperBound);
 	}
 	/*
@@ -35,9 +43,10 @@ public class WasuthunGame extends NumberGame{
 	 * @return solution of your guess
 	 */
 	public boolean guess(int number) {
-		super.setCount(getCount()+1);
+		count++;
+		System.out.println("plus");
 		if(number==this.secret) {
-			super.setMessage("Correct Count "+getCountWasuthun());
+			super.setMessage("Correct Count "+getCount());
 			return true;
 			}
 		else if(number<this.secret) { 
@@ -54,8 +63,8 @@ public class WasuthunGame extends NumberGame{
 	 * this method is use to access a count
 	 * @return count of guess; 
 	 */
-	public int getCountWasuthun() {
-		return super.getCount();
+	public int getCount() {
+		return this.count;
 	}
 	/*
 	 * this method use to change a upperBound
