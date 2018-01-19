@@ -14,6 +14,6 @@ public class Main {
 //		GameSolver g=new GameSolver();
 //		System.out.println("GameSolver answer "+g.play(game));
 		GameSolver2 gg=new GameSolver2();
-		System.out.println("GameSolver answer "+gg.play(game) + " "+ game.getCount());
+		System.out.println("GameSolver answer "+gg.play(game) + " Count "+ game.getCount());
 	}
 }
