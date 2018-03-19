@@ -1,10 +1,11 @@
+package application;
 /**
  * Automatically find the secret to any NumberGame
  * 
  * @author wasuthun wanaphongthipakorn
  *
  */
-public class GameSolver2 {
+public class GameSolver {
 	/**
 	 * play method is used to find a fast solution for solve problem
 	 * 

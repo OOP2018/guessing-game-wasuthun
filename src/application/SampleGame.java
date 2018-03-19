@@ -1,3 +1,4 @@
+package application;
 import java.util.Random; 
 /**
  * Example guessing game.
@@ -12,7 +13,7 @@ public class SampleGame extends NumberGame {
     private int secret;
     
 	/** count guesses */
-//TODO add an attribute to count guesses
+
     private int count=0;
 
     /** Initialize a new default game. */
@@ -40,6 +41,8 @@ public class SampleGame extends NumberGame {
      */
     public boolean guess(int number) {
     	count++;
+    	setChanged();
+    	notifyObservers(number);
     	if (number == secret) {
     		setMessage("Correct! The decimal value is "+secret+" count guess"+count);
     		return true;
